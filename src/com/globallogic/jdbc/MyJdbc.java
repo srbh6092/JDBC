@@ -36,13 +36,13 @@ public class MyJdbc {
 			int depId=1001;
 			
 			
-//			//INSERT
-//			String insertQuery = "INSERT INTO employees VALUES (66123,'JACK','MANAGER',68319,'1991-07-08',2898.00,1000.00,1001)";
-//			statement.execute(insertQuery);
+			//INSERT
+			String insertQuery = "INSERT INTO employees VALUES (66123,'JACK','MANAGER',68319,'1991-07-08',2898.00,1000.00,1001)";
+			statement.execute(insertQuery);
 			
-//			//UPDATE
-//			String updateQuery = "UPDATE employees SET SALARY=2300.00 WHERE emp_id=67832";
-//			statement.executeUpdate(updateQuery);
+			//UPDATE
+			String updateQuery = "UPDATE employees SET SALARY=2300.00 WHERE emp_id=67832";
+			statement.executeUpdate(updateQuery);
 			
 			//DELETE
 			String deleteQuery = "DELETE FROM employees WHERE emp_id=66928";
@@ -51,7 +51,7 @@ public class MyJdbc {
 			//SELECT
 			String selectAllQuery="SELECT * FROM employees";
 			ResultSet resultSet = statement.executeQuery(selectAllQuery);
-			while(resultSet.next()){
+			while(resultSet.next()) {
 				
 				empId=resultSet.getInt("emp_id");
 				empName=resultSet.getString("emp_name");
